@@ -78,10 +78,10 @@ public class Face {
     }
 
     // Creates a Face object with specified width and height, random position, mouth, and eye color
-    public Face(int width, int height) {
+    public Face(int widthIn, int heightIn) {
         Random rand = new Random();
-        this.width = width;
-        this.height = height;
+        this.width = widthIn;
+        this.height = heightIn;
         this.x = rand.nextInt(400);
         this.y = rand.nextInt(300);
         setRandomMouth();
@@ -89,12 +89,12 @@ public class Face {
     }
 
     // Creates a Face object with specified position, width, height, and mouth type, and random eye color
-    public Face(int x, int y, int width, int height, String mouthType) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-        this.mouthType = mouthType;
+    public Face(int xIn, int yIn, int widthIn, int heightIn, String mouthTypeIn) {
+        this.x = xIn;
+        this.y = yIn;
+        this.width = widthIn;
+        this.height = heightIn;
+        this.mouthType = mouthTypeIn;
         setEyeColorBasedOnMouth();
     }
 
@@ -131,11 +131,11 @@ public class Face {
     public String getMouthType() { return mouthType; }
     public String getEyeColor() { return eyeColor; }
 
-    public void setX(int x) { this.x = x; }
-    public void setY(int y) { this.y = y; }
-    public void setWidth(int width) { this.width = width; }
-    public void setHeight(int height) { this.height = height; }
-    public void setMouthType(String mouthType) { this.mouthType = mouthType; }
+    public void setX(int xIn) { this.x = xIn; }
+    public void setY(int yIn) { this.y = yIn; }
+    public void setWidth(int widthIn) { this.width = widthIn; }
+    public void setHeight(int heightIn) { this.height = heightIn; }
+    public void setMouthType(String mouthTypeIn) { this.mouthType = mouthTypeIn; setEyeColorBasedOnMouth(); }
 
     // Returns a string representation of the Face object, including its position, size, mouth type, and eye color
     @Override

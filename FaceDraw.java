@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 
 public class FaceDraw {
 
+    //Creates a JFrame that is titled "FaceDraw" and sets its size and close operation
     public static void main(String[] args) {
         JFrame frame = new JFrame("FaceDraw");
         frame.setSize(600,500);
@@ -23,6 +24,7 @@ public class FaceDraw {
         FacePanel facePanel = new FacePanel(faceList);
         frame.add(facePanel);
 
+        // Adds the FacePanel to the JFrame and makes the frame visible
         frame.setVisible(true);
     }
 }
